@@ -1,7 +1,7 @@
 <template>
 
   <Header />
-  <div class="container">
+  <div class="container" >
     <div class="row">
       <div class="col-md-6 mx-auto text-center" >
           <img alt="Vue logo" src="./assets/logo.png">
@@ -14,7 +14,7 @@
     <Courses />
 
   </div>
-  <Footer />  
+  <Footer url="https://udemy.com" title='Best Learning platforme' text='Learn latest technologies now' />  
 
 </template>
 

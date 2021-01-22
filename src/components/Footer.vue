@@ -2,22 +2,20 @@
 
     <div class="card text-center mt-5">
         <div class="card-header">
-            Featured
+            {{ text }}
         </div>
         <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <blockquote class="blockquote mb-0">
+                <footer class="blockquote-footer"> {{title}} <a :href="url">{{ text }}</a> </footer>
+            </blockquote>
         </div>
-        <div class="card-footer text-muted">
-            2 days ago
-        </div>
+        
     </div>
 
 </template>
 <script>
 export default {
-    
+    props: ['url','title','text']
 }
 </script>
 <style lang="">

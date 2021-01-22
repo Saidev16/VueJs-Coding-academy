@@ -1,19 +1,19 @@
     <template lang="">
         <div class="row">
             <div class="col-md-4" v-for="course in courses" v-bind:key="course.id">
-                <div class="card">
-                    <img class="card-img-top" :src="course.image" :alt="course.title">
-                    <div class="card-body">
-                        <h4 class="card-title">{{ course.title }}</h4>
-                        <p class="card-text"> lorem ipsum ... </p>
-                    </div>
-                </div>
+
+                <OneCourse :id='course.id' :title="course.title" :image="course.image" @delete="deleteOneCourse($event)" />
+
             </div>
         </div>
     </template>
 
-    <script>
+    <script>    
+    import OneCourse from './OneCourse';
     export default {
+        components : {
+            OneCourse
+        },
         data() {
             return {
                 courses : [
@@ -49,6 +49,11 @@
                         'image':'https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/s3P1B6MDQlWUJhPhU7VC'
                     }
                 ]
+            }
+        },
+        methods: {
+            deleteOneCourse(id){
+                this.courses = this.courses.filter( course => course.id != id )
             }
         },
         
