@@ -11,7 +11,20 @@
           
       </div>
     </div>
-    <Courses />
+    <Courses>
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+           <li class="breadcrumb-item"><a href="#">Home</a></li>
+           <li class="breadcrumb-item active" aria-current="page">List of courses</li>
+         </ol>
+      </nav>
+
+      <template v-slot:button-right >
+        <button class="btn btn-sm btn-success " >New</button>
+      </template>
+      
+
+    </Courses>
 
   </div>
   <Footer url="https://udemy.com" title='Best Learning platforme' text='Learn latest technologies now' />  
@@ -21,14 +34,12 @@
 <script>
 
 import Header from './components/Header';
-import AddCourse from './components/AddCourse';
 import Courses from './components/Courses';
 import Footer from './components/Footer';
 export default {
   name: 'App',
   components: {
     Header,
-    AddCourse,
     Courses,
     Footer
   },

@@ -1,5 +1,23 @@
     <template lang="">
         <div class="row">
+            <div class="col-md-6 mx-auto">
+                <AddCourse @cours="addOneCourse($event)" />
+            </div>
+        </div>
+        
+        
+        <div class="row">
+            <div class="col-md-6">
+            <slot></slot>
+
+                <h1>List of course</h1>
+            </div>
+            <div class="col-md-6 text-right" >
+                <slot name='button-right'></slot>
+            </div>
+        </div>
+        
+        <div class="row">
             <div class="col-md-4" v-for="course in courses" v-bind:key="course.id">
 
                 <OneCourse :id='course.id' :title="course.title" :image="course.image" @delete="deleteOneCourse($event)" />
@@ -10,9 +28,11 @@
 
     <script>    
     import OneCourse from './OneCourse';
+    import AddCourse from './AddCourse';
     export default {
         components : {
-            OneCourse
+            OneCourse,
+            AddCourse
         },
         data() {
             return {
@@ -54,7 +74,11 @@
         methods: {
             deleteOneCourse(id){
                 this.courses = this.courses.filter( course => course.id != id )
+            } ,
+            addOneCourse(course){
+                this.courses.push(course)
             }
+
         },
         
     }
