@@ -1,6 +1,6 @@
 <template lang="">
 
-    <nav class="navbar navbar-expand-sm fixed-top navbar-light bg-warning">
+    <nav class="navbar navbar-expand-sm  navbar-light bg-warning">
         <a class="navbar-brand" href="#">Academy Coding</a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
             aria-expanded="false" aria-label="Toggle navigation">

@@ -17,12 +17,7 @@
            <li class="breadcrumb-item"><a href="#">Home</a></li>
            <li class="breadcrumb-item active" aria-current="page">List of courses</li>
          </ol>
-      </nav>
-
-      <template v-slot:button-right >
-        <button class="btn btn-sm btn-success " >New</button>
-      </template>
-      
+      </nav>      
 
     </Courses>
 
@@ -45,7 +40,10 @@ export default {
   },
   data() {
     return {
-      message : 'bright coding'
+      message : 'bright coding',
+      state : false ,
+      activeColor: ''
+
     }
   },
   methods: {
@@ -54,7 +52,8 @@ export default {
       this.$refs.book.classList.add('active');
       this.$refs.book.focus();
 
-    }
+    },
+    
   }
 }
 </script>
