@@ -4,8 +4,6 @@
   <div class="container" >
     <div class="row">
       <div class="col-md-6 mx-auto text-center" >
-          <img alt="Vue logo" src="./assets/logo.png">
-          <h1>{{message}}</h1>
 
           <AddCourse />
           
